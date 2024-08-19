@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Intelligent Document Summarizer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Intelligent Document Summarizer</h1>
+      <div class="card mt-3">
+        <div class="card-body">
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" class="form-control-file" name="file" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Summarize</button>
+          </form>
+        </div>
+      </div>
+      {% if summary %}
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Summary</h5>
+          <p class="card-text" id="summary">{{ summary }}</p>
+          <form action="/download" method="post" class="mt-3">
+            <input type="hidden" name="summary" value="{{ summary }}">
+            <button type="submit" class="btn btn-secondary">Download</button>
+          </form>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

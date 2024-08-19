@@ -1,0 +1,10 @@
+Flask==2.0.3
+itsdangerous==2.0.1
+Jinja2==3.0.3
+Werkzeug==2.0.3
+MarkupSafe==2.0.1
+fitz==0.0.1.dev2
+PyMuPDF==1.18.17
+nltk==3.6.7
+scikit-learn==1.0.2
+numpy==1.22.3
